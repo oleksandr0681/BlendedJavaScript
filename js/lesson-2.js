@@ -28,7 +28,7 @@ console.log(styles);
 
 function logItems(array) {
     for (let i = 0; i < array.length; i++) {
-        console.log(`${1 + 1} - ${array[i]}`);
+        console.log(`${i + 1} - ${array[i]}`);
     }
 }
 
@@ -91,7 +91,6 @@ function sumNumbers(array) {
     const newArray = [];
 
     for (let i = 0; i < array.length - 1; i += 1) {
-        const element = array[index];
         newArray.push(array[i] + array[i + 1]);
     }
 
