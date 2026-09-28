@@ -22,7 +22,7 @@ if (number === 10) {
 // Виведіть в alert відповідне повідомлення, наприклад:
 // "10 входить в першу чверть"
 
-const min = Math.floor(Math.random() * 59);
+const min = Math.floor(Math.random() * 60);
 
 if (min < 15) {
   alert(`${min} входить в першу чверть`);
@@ -48,7 +48,6 @@ function formatTime(totalMinutes) {
   const minutes = totalMinutes % 60;
   const modifiedMinutes = String(minutes).padStart(2, "0");
   return `${modifiedHours}:${modifiedMinutes}`;
-  console.log(modifiedHours);
 }
 
 console.log(formatTime(totalMinutes));
@@ -79,6 +78,8 @@ if (login === "Адмін") {
   }
 } else if (login === null || login === "") {
   alert("Скасовано");
+} else {
+  alert("Я вас не знаю");
 }
 
 // Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
@@ -112,11 +113,9 @@ function fizzBuzz(num) {
   for (let index = 1; index <= num; index++) {
     if (index % 3 === 0 && index % 5 === 0) {
       console.log("fizzbuzz");
-    }
-    if (index % 3 === 0) {
+    } else if (index % 3 === 0) {
       console.log("fizz");
-    }
-    if (index % 5 === 0) {
+    } else if (index % 5 === 0) {
       console.log("buzz");
     }
   }
